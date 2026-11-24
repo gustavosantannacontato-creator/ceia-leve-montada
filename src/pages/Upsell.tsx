@@ -19,7 +19,7 @@ export default function Upsell() {
       </div>
       <main className="py-12 md:py-20">
         <div className="container-x grid max-w-5xl items-center gap-10 md:grid-cols-[.8fr_1.2fr]">
-          <img src="capas/4-Upsell-Janeiro-Leve.png" alt="Capa do guia Janeiro Leve" className="mx-auto w-60 rounded-lg shadow-book sm:w-72" />
+          <img src={`${import.meta.env.BASE_URL}capas/4-Upsell-Janeiro-Leve.png`} alt="Capa do guia Janeiro Leve" className="mx-auto w-60 rounded-lg shadow-book sm:w-72" />
           <div>
             <p className="eyebrow">Oferta única</p>
             <h1 className="mt-2 text-4xl font-semibold leading-tight text-pine sm:text-5xl">Dezembro está resolvido. E janeiro?</h1>

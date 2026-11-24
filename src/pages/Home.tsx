@@ -66,8 +66,8 @@ export default function Home() {
             </div>
           </div>
           <div className="relative mx-auto w-64 sm:w-80 md:w-full md:max-w-sm">
-            <img src="paginas/receita-lombo.png" alt="Página de receita do guia" className="absolute -right-6 top-10 hidden w-3/4 rotate-6 rounded-lg shadow-book sm:block" loading="lazy" />
-            <img src="capas/0-Ceia-Leve-Montada.png" alt="Capa do guia Ceia Leve Montada" className="relative w-full -rotate-2 rounded-lg shadow-book" />
+            <img src={`${import.meta.env.BASE_URL}paginas/receita-lombo.png`} alt="Página de receita do guia" className="absolute -right-6 top-10 hidden w-3/4 rotate-6 rounded-lg shadow-book sm:block" loading="lazy" />
+            <img src={`${import.meta.env.BASE_URL}capas/0-Ceia-Leve-Montada.png`} alt="Capa do guia Ceia Leve Montada" className="relative w-full -rotate-2 rounded-lg shadow-book" />
           </div>
         </div>
       </header>
@@ -180,7 +180,7 @@ export default function Home() {
           <div className="mt-10 grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-3">
             {paginas.map(([f, t]) => (
               <figure key={f} className="text-center">
-                <img src={`paginas/${f}.png`} alt={t} loading="lazy" className="paper-shadow w-full rounded-lg border border-line" />
+                <img src={`${import.meta.env.BASE_URL}paginas/${f}.png`} alt={t} loading="lazy" className="paper-shadow w-full rounded-lg border border-line" />
                 <figcaption className="mt-3 text-sm font-bold text-pine">{t}</figcaption>
               </figure>
             ))}
@@ -231,7 +231,7 @@ export default function Home() {
       {/* OFERTA */}
       <section id="oferta" className="scroll-mt-16 bg-[radial-gradient(120%_90%_at_50%_0%,#2A6E53_0%,#1F5A43_45%,#143D2D_100%)] py-16 text-white md:py-24">
         <div className="container-x grid max-w-5xl items-center gap-10 md:grid-cols-2">
-          <img src="capas/0-Ceia-Leve-Montada.png" alt="Capa do guia" className="mx-auto w-60 -rotate-2 rounded-lg shadow-book sm:w-72" loading="lazy" />
+          <img src={`${import.meta.env.BASE_URL}capas/0-Ceia-Leve-Montada.png`} alt="Capa do guia" className="mx-auto w-60 -rotate-2 rounded-lg shadow-book sm:w-72" loading="lazy" />
           <div className="rounded-3xl bg-cream p-7 text-ink sm:p-9">
             <p className="eyebrow">Acesso imediato</p>
             <h2 className="mt-2 font-serif text-3xl font-semibold text-pine">Ceia Leve Montada</h2>

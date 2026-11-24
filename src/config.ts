@@ -19,12 +19,12 @@ export const config = {
   upsell: {
     preco: "37",
     aceitar: "https://LINK-DE-1-CLIQUE-DO-UPSELL",
-    recusar: "ultima-chance",
+    recusar: import.meta.env.BASE_URL + "ultima-chance",
   },
   downsell: {
     preco: "27",
     aceitar: "https://LINK-DE-1-CLIQUE-DO-DOWNSELL",
-    recusar: "obrigado",
+    recusar: import.meta.env.BASE_URL + "obrigado",
   },
 
   // Data da ceia: o contador do topo mostra quantos dias faltam.
