@@ -1,6 +1,7 @@
 import { Check, AlertTriangle, ShieldCheck } from "lucide-react";
 import { config } from "@/config";
-import { CTA, Footer } from "@/components/ui";
+import { Footer } from "@/components/ui";
+import { KiwifyUpsell } from "@/components/KiwifyUpsell";
 
 const itens = [
   ["3 cardápios semanais prontos", "Café, almoço, lanche e jantar de cada dia."],
@@ -52,9 +53,10 @@ export default function Upsell() {
         <div className="container-x mt-10 max-w-xl text-center">
           <p className="text-muted">Só nesta página, sem precisar digitar o cartão de novo</p>
           <p className="mt-1 font-serif text-6xl font-semibold text-berry">R$ {config.upsell.preco}</p>
-          <div className="mt-6"><CTA href={config.upsell.aceitar} className="sm:w-full">Sim, quero começar Janeiro Leve</CTA></div>
+          <div className="mt-6">
+            <KiwifyUpsell id={config.upsell.kiwifyId} aceitar={config.upsell.textoAceitar} recusar={config.upsell.textoRecusar} downsellUrl={config.upsell.urlDownsell} />
+          </div>
           <p className="mt-4 flex items-center justify-center gap-2 text-sm text-muted"><ShieldCheck className="h-4 w-4" aria-hidden /> {config.garantia} dias de garantia: se não gostar, devolvemos 100% do valor.</p>
-          <a href={config.upsell.recusar} className="mt-6 inline-block text-sm text-muted underline">Não, obrigado. Prefiro descobrir por conta própria o que comer em janeiro.</a>
         </div>
       </main>
       <Footer />

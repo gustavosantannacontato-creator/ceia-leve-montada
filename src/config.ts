@@ -11,20 +11,24 @@ export const config = {
 
   // Link do checkout do produto principal (Kiwify, Hotmart, Cakto, Eduzz...).
   // Os 3 order bumps são configurados DENTRO da plataforma de checkout.
-  checkout: "https://SEU-CHECKOUT-AQUI",
+  checkout: "https://pay.kiwify.com.br/B1FMDdb",
 
   // Upsell (página /oferta-especial) e downsell (página /ultima-chance).
-  // Se a sua plataforma oferece "compra com 1 clique", use o link que ela
-  // gera para o botão de aceitar (ver LEIA-ME.md).
+  // Botões de compra com 1 clique gerados no "Gerador de upsell" da Kiwify
+  // (produto Ceia Leve Montada > Configurações > Página de obrigado e upsell).
+  // O "kiwifyId" é o código que aparece em id="kiwify-upsell-XXXX".
   upsell: {
     preco: "37",
-    aceitar: "https://LINK-DE-1-CLIQUE-DO-UPSELL",
-    recusar: import.meta.env.BASE_URL + "ultima-chance",
+    kiwifyId: "zK0kIB2", // oferta "Janeiro Leve - Upsell" · ao recusar, vai para o downsell
+    textoAceitar: "SIM, QUERO COMEÇAR JANEIRO LEVE",
+    textoRecusar: "Não, obrigado. Prefiro descobrir por conta própria o que comer em janeiro.",
+    urlDownsell: "https://gustavosantannacontato-creator.github.io/ceia-leve-montada/ultima-chance/",
   },
   downsell: {
     preco: "27",
-    aceitar: "https://LINK-DE-1-CLIQUE-DO-DOWNSELL",
-    recusar: import.meta.env.BASE_URL + "obrigado",
+    kiwifyId: "ml4Efus", // oferta "Janeiro Leve - Downsell" · ao recusar, vai para a área de membros
+    textoAceitar: "QUERO O JANEIRO LEVE POR R$ 27",
+    textoRecusar: "Não, obrigado. Pode seguir para o meu acesso.",
   },
 
   // Data da ceia: o contador do topo mostra quantos dias faltam.
